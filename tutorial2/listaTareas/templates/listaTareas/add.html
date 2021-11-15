@@ -1,0 +1,13 @@
+{% extends 'listaTareas/layout.html' %}
+
+{% block body %}
+	<h1> Agregar tareas</h1>
+
+	<form method="post">
+		{% csrf_token %} <!-- autenticacion -->
+		{{ form }}
+		<button>Enviar</button>
+	</form>
+	<a href="{% url 'home' %}">Página principal</a>
+{% endblock %}
+
